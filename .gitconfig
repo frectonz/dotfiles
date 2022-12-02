@@ -1,0 +1,13 @@
+[user]
+	email = fraol0912@gmail.com
+	name = frectonz
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = trunk
+[alias]
+	conf = !git --git-dir=$HOME/dotfiles --work-tree=$HOME
