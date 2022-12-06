@@ -1,0 +1,12 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "ocaml"
+auto-format = true
+
