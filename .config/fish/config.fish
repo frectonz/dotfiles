@@ -11,6 +11,11 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
+function mkcd
+  mkdir $argv
+  cd $argv
+end
+
 abbr -ag ll "ls -al"
 abbr -ag la "ls -a"
 
