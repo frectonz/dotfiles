@@ -1,10 +1,24 @@
-local colorscheme = "mellow"
+-- local colorscheme = "mellow"
+--
+-- vim.cmd(string.format("colorscheme %s", colorscheme))
+--
+-- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+--
+-- if not status_ok then
+--   vim.notify("colorscheme " .. colorscheme .. " not found!")
+--   return
+-- end
+--
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--
 
-vim.cmd(string.format("colorscheme %s", colorscheme))
+function ColorMyPencils(color)
+  color = color or "mellow"
+  vim.cmd.colorscheme(color)
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-
-if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+
+ColorMyPencils()

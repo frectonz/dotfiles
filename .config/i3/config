@@ -25,7 +25,7 @@ exec_always --no-startup-id picom
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # play startup sound
-exec --no-startup-id "mpv ~/Downloads/welcometowhatever.wav"
+exec --no-startup-id "mpv ~/Music/welcometowhatever.wav"
 
 # Set mod key
 set $mod Mod4
@@ -33,7 +33,7 @@ set $mod Mod4
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+F1 exec brave-browser
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
@@ -202,6 +202,7 @@ bar {
 
 bindsym $mod+End exec i3lock-conf
 bindsym $mod+Tab exec alacritty -e ranger
+bindsym $mod+P exec passmenu
 
 # Handle backlight.
 bindsym XF86MonBrightnessUp exec brightnessctl set +100
@@ -213,7 +214,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Z mode $movie
 
-set $movie "The [O]ffice / [S]unny / The [I]T Crowd / [C]ommunity / [N]ew Girl / Silicon [V]alley / [R]ck and Morty"
+set $movie "The [O]ffice | [S]unny | The [I]T Crowd | [C]ommunity | [N]ew Girl | Silicon [V]alley | [R]ck and Morty"
 mode $movie {
     bindsym O exec mpv "/mnt/media/home/fraol/Videos/The Office/" --shuffle
     bindsym S exec mpv "/mnt/media/home/fraol/Videos/It's Always Sunny in Philadelphia/" --shuffle

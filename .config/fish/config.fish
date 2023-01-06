@@ -55,6 +55,7 @@ fish_add_path ~/.nix-profile/bin/
 fish_add_path /nix/var/nix/profiles/default/bin/
 fish_add_path /usr/local/texlive/2022/bin/x86_64-linux/
 fish_add_path /usr/local/go/bin/
+fish_add_path /home/fraol/bin/
 
 set -gx PNPM_HOME "/home/fraol/.local/share/pnpm"
 
