@@ -44,7 +44,6 @@ abbr -ag fish-conf "vim ~/.config/fish/config.fish"
 
 set -gx EDITOR "vim"
 set -gx VISUAL "vim"
-set -gx MANPAGER "less" 
 set -gx TERMINAL "alacritty"
 
 fish_add_path ~/.bin/
@@ -75,3 +74,7 @@ if status is-interactive
   starship init fish | source
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

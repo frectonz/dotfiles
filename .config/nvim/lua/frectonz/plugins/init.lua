@@ -82,6 +82,7 @@ packer.startup(function(use)
 
   -- Games
   use "seandewar/killersheep.nvim"
+  use 'eandrju/cellular-automaton.nvim'
 
   -- rust stuff
   use 'simrat39/rust-tools.nvim'
